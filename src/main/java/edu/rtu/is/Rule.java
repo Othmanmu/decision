@@ -1,7 +1,5 @@
 package edu.rtu.is;
 
-import sun.jvm.hotspot.ui.tree.FloatTreeNodeAdapter;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,7 +9,7 @@ public class Rule {
     List<String> conditions;
     String result;
 
-    HashMap<String, Float> conditionValues = new HashMap<>();
+    HashMap<String, Float> conditionValues;
 
     public Rule(List<String> conditions, HashMap<String, Float> conditionValues, String result) {
         this.conditions = conditions;
