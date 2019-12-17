@@ -59,7 +59,6 @@ public class IntelligentSystem {
             e.printStackTrace();
         }
 
-
         for (CSVRecord record : records) {
             System.out.println(record.toString());
 
@@ -72,7 +71,6 @@ public class IntelligentSystem {
         ArrayList<String> names = new ArrayList<>();
         records.get(0).iterator().forEachRemaining(names::add);
         return names;
-
     }
 
     /**

@@ -17,6 +17,7 @@ public class Rule {
         this.result = result;
     }
 
+
     public static void main(String[] args) {
         List<String> conditions = Arrays.asList("A", "B", "C");
         HashMap<String, Float> data = new HashMap<>();
@@ -58,4 +59,7 @@ public class Rule {
         return conditions.containsAll(cond);
     }
 
+    public HashMap<String, Float> getConditionValues() {
+        return conditionValues;
+    }
 }
