@@ -62,4 +62,8 @@ public class Rule {
     public HashMap<String, Float> getConditionValues() {
         return conditionValues;
     }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
 }

@@ -11,7 +11,15 @@ import java.util.*;
 
 public class CsvHelper {
 
-
+    /**
+     *
+     * @param path : The path to the csv file to convert into object Rule
+     * @param parameters : Map of object where you can parameter the calculation :
+     *                   value_feature : (float) value by default for each columns by default 0.1f
+     *                   value_new : (float) value by default for row add by default 0.1f
+     *                   result_column_name : (string) the name of the result columns otherwise by default it takes the last columns name
+     * @return
+     */
     public static Rule toRule(String path, Map<String, Object> parameters) {
 
         List<CSVRecord> records = null;
