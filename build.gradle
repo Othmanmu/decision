@@ -32,7 +32,20 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'edu.rtu.is.MainFrame'
+        )
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+}
+
 application {
     // Define the main class for the application
-    mainClassName = 'project.App'
+    mainClassName = 'edu.rtu.is.MainFrame'
 }

@@ -31,7 +31,7 @@ public class Rule {
         System.out.println(rule.contains(Arrays.asList("B", "A")));
     }
 
-    private List<String> getConditions() {
+    public List<String> getConditions() {
         return conditions;
     }
 
@@ -55,7 +55,16 @@ public class Rule {
     }
 
     public boolean contains(List<String> cond) {
-        return conditions.containsAll(cond);
+
+        return  conditions.stream().filter(cond::contains).findAny().isPresent();
+
+
     }
+
+    @Override
+    public String toString() {
+        return "Rule{" + "conditions=" + conditions + ", result=" + result + "}";
+    }
+
 
 }
